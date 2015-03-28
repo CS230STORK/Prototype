@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+	<head> 
+	<style type = "text/css">
+		#container {
+		display: table;
+		align-content: left;
+		}
+		.row{
+		display: table-row;
+		padding 15px
+		}
+		.col{
+		display: table-cell;
+		margin : 500px;
+		}
+		</style>
+		
+		<script type="text/javascript">
+
+    function show(id) {
+       var e = document.getElementById(id);
+          e.style.display = 'block';
+    }
+	
+	function hide(id) {
+		var e = document.getElementById(id);
+		e.style.display ='none';
+		}
+</script>
+		</head>
+	
+	<body>
+
+
+
+		<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1> 
+		<h2> <font color ="gold"> Meal PLans </font> </h2></center>
+</br>
+		<center><a href="file:///Users/shogan94/Desktop/Index.html"> <b>Home Page</b></a> | <a href="file:///Users/shogan94/Desktop/DiningDollars.html"> <b>Dining Dollars</b></a></center>
+		
+		
+	</body>
+</html>
