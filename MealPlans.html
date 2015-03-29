@@ -1,43 +1,275 @@
 <!Doctype html>
 <html>
-<head>
+	<head> 
 	<style type = "text/css">
 		#container {
-			display: table;
+		display: table;
+		align-content: left;
 		}
 		.row{
-			display: table-row;
-			padding: 15px
+		display: table-row;
+		padding 15px
 		}
 		.col{
-			display: table-cell;
-			margin : 500px;
+		display: table-cell;
+		margin : 500px;
 		}
-	</style>
-
-	<script type="text/javascript">
-
-		function show(id) {
-			var e = document.getElementById(id);
-			e.style.display = 'block';
+		h1{
+			margin-top:5px;
+			margin-bottom:5px;
 		}
-
-		function hide(id) {
-			var e = document.getElementById(id);
-			e.style.display ='none';
+		h2{
+			margin-top:5px;
 		}
-	</script>
-</head>
+		h3{
+			margin-bottom:5px;
+			margin-top:5px;
+		}
+		h4{	
+			margin-bottom:5px;
+		}
+		li{
+			margin-bottom:10px;
+		}
+		</style>
+		
+		<script type="text/javascript">
 
-<body>
+    function show(id) {
+       var e = document.getElementById(id);
+          e.style.display = 'block';
+    }
+	
+	function hide(id) {
+		var e = document.getElementById(id);
+		e.style.display ='none';
+		}
+</script>
+		
+		</head>
+	
+	<body>
 
 
+		<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1> 
+		<h2> <font color ="orange"> Meal Plans </font> </h2></center>
+		<center><a href="file:///Users/shogan94/Desktop/Index.html"> <b>Home Page</b></a> | <a href="file:///Users/shogan94/Desktop/DiningDollars.html"> <b>Dining Dollars</b></a></center>
+		<center><p> Morgantown College is happy to announce that we now offer Meal Plans to Students, faculty, and even the general public! Students no longer have to eat in their dorms food facility! Meals Plans work at all campus food locations as well as certain third party restuarants. See below for more information.</p></center>
+		
+			<center><div class="row">
+				<div class="col">
+				<button onclick="show('Information'); hide('Options'); hide('Form');"><h3>Information</h3></button>
+				<button onclick="show('Options'); hide('Information'); hide('Form');"><h3>Meal Plan Options</h3></button>	
+				<button onclick="show('Form'); hide('Options'); hide('Information');"><h3>Meal Plan Form</h3></button>	
+				
+			</div>
+		</div></center>
+		
+		<div id= "Information" style="width:90%; margin:15px; display:none;">
+			<div class="row">
+				<div class="col">
+				<h3>General Information</h3>
+					<ul> 
+						<li><h4>EVERYONE is eligible for a meal plan</h4><font size="3";> With our new meal plans everyone is eligibile for a meal plan. Students and faculty can use their id cards for meal plans. The general public can request an id card that will hold their meal plan information on it. </font></li>
+						
+						<li><h4>Get a meal plan tailored to your needs</h4><font size="3"> We understand that no two people are the same, so why should their meal plans be the same? We now offer a variety of meal plans so that you dont have to waste food or money. </font></li>
+						
+						<li><h4>Flexibility with changing meal plans</h4><font size="3"> Not sure which meal plan is best for you? Thats okay because we allow you to change your meal plan at any time in the semester! However, you are only able to upgrade your meal plan and cannot downgrade. Unfortunately if your meal plan is too large you can downgrade at the end of the semester when you choose your new meal plan package. </font></li>
+						
+						<li><h4> Rollovers </h4><font size="3"> Unfortunately we are unable to allow meals to roll over from day to day as well as semester to semester. So if you have a three meal-a-day plan and only use two of those meals, the next day you cannot get four meals, you can still only get three.</font></li> 
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+				<h3>Students</h3>
+					<ul> 
+						<li> <h4> Getting a Meal Plan </h4><font size="3"> Since students members already have an id card, getting a meal plan is very simple. All that you have to do is fill out the meal plan form and once your done your id card will be ready to go.</li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+				<h3>Faculty</h3>
+					<ul> 
+						<li> <h4> Getting a Meal Plan </h4><font size="3"> Since faculty members already have an id card, getting a meal plan is very simple. All that you have to do is fill out the meal plan form and once your done your id card will be ready to go.</li></li>
+					</ul>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col">
+				<h3>General Public</h3>
+					<ul> 
+						<li> <h4> Getting a Meal Plan </h4><font size="3"> In order to get a meal plan you have to contact card services and order a id card with 'general public' status. Then you can go and select a meal plan that fits your needs and fill out the meal plan form and your id card will do the rest.</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+			
+			
+		
+			<div id= "Options" style="width:90%; margin:15px; display:none;">
+				<center> <div class="row">
+					<div class="col">
+						<h3>Meal Plan #1</h3>
+						<ul>
+							<h4>Three meals a day</h4>
+							<li>One(1) breakfast meal</li>
+							<li>One(1) lunch meal</li>
+							<li>One(1) dinner meal</li>
+						</ul>
+					</div>
+				</div>
+				<div class= "row">
+					<div class="col">
+						<h3>Meal Plan #2</h3>
+						<ul>
+							<h4>Two meals a day</h4>
+							<li>One(1) breakfast meal</li>
+							<li>One(1) lunch meal</li>
+						</ul>
+					</div>
+					
+					<div class="col">
+						<h3>Meal Plan #3</h3>
+						<ul>
+							<h4>Two meals a day</h4>
+							<li>One(1) breakfast meal</li>
+							<li>One(1) dinner meal</li>
+						</ul>
+					</div>
+				
+					<div class="col">
+						<h3>Meal Plan #4</h3>
+						<ul>
+							<h4>Two meals a day</h4>
+							<li>One(1) lunch meal</li>
+							<li>One(1) dinner meal</li>
+						</ul>
+					</div>
+				</div>
+				<div class= "row">
+					<div class="col">
+						<h3>Meal Plan #5</h3>
+						<ul>
+							<h4>One meal a day</h4>
+							<li>One(1) breakfast meal</li>
+						</ul>
+					</div>
+				
+					<div class="col">
+						<h3>Meal Plan #6</h3>
+						<ul>
+							<h4>One meal a day</h4>
+							<li>One(1) lunch meal</li>
+						</ul>
+					</div>
+				
+					<div class="col">
+						<h3>Meal Plan #7</h3>
+						<ul>
+							<h4>One meal a day</h4>
+							<li>One(1) dinner meal</li>
+						</ul>
+					</div>
+				</div>
+			</div></center>
+			
+			<div id= "Form" style="width:90%; margin:15px; display:none;">
+				<div class="row">
+					<div class="col">
+					<h2> Meal Plan Form</h2>
+							<form>
+								<div class="row">
+									<div class = "col">
+							Name: 
+						</div>
+						<div class="col">
+							<input type = "Text" placeholder = "First Name" name="First Name" id="firstName"></br>
+						</div>
+						<div class="col">
 
-<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1>
-	<h2> <font color ="gold"> Meal Plans </font> </h2></center>
-</br>
-<center><a href="Index.html"> <b>Home Page</b></a> | <a href="DiningDollars.html"> <b>Dining Dollars</b></a></center>
+						</div>
+						<div class="col">
+							<input type="Text" placeholder = "Last Name" name="Last Name" id="lastName"></br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+						</br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							Email address:  
+						</div>
+						<div class="col">
+							<input type="Text" name="ID Number" id="idNumber"></br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+						</br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							ID Number: 
+						</div>
+						<div class="col">
+							<input type="Text" name="ID Number" id="idNumber"></br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+						</br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							Meal Plan:  
+						</div>
+						<div class="col">
+							<select>
+							  <option value="Meal Plan #1">Meal Plan #1 (B/L/D)</option>
+							  <option value="Meal Plan #2">Meal Plan #2 (B/L)</option>
+							  <option value="Meal Plan #3">Meal Plan #3 (B/D)</option>
+							  <option value="Meal Plan #4">Meal Plan #4 (L/D)</option>
+							  <option value="Meal Plan #5">Meal Plan #5 (B)</option>
+							  <option value="Meal Plan #6">Meal Plan #6 (L)</option>
+							  <option value="Meal Plan #7">Meal Plan #7 (D)</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+						</br>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col">
+							Credit Card Number: 
+						</div>
+						<div class="col">
+							<input type="Text" name="Credit Card Number" id="creditNumber"></br>
+						</div>
+					</div>
+							<button onclick="popUp();"> Submit</button>
+						</div>
+							</form>
+				</div>
+			</div>
+		</div>
 
-
-</body>
+		
+	</body>
 </html>
