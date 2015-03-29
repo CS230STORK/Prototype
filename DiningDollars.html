@@ -1,105 +1,105 @@
 <!Doctype html>
 <html>
-	<head> 
-		<script>
+<head>
+	<script>
 		function popUp() {
 			alert("The balance for " + document.getElementById('email').value + " is $" + (Math.random()*100).toFixed(2) + ".");
 		}
-		
-		</script>
-		<script>
+
+	</script>
+	<script>
 		function add(){
 			confirm("Are you sure you want to add $"+ document.getElementById('amount').value +" to " + document.getElementById('email2').value +"'s account?" );
 		}
-		
-		</script>
-		
-		
+
+	</script>
+
+
 	<style type = "text/css">
 		#container {
-		display: table;
-		align-content: left;
+			display: table;
+			align-content: left;
 		}
 		.row{
-		display: table-row;
-		padding 15px
+			display: table-row;
+			padding 15px
 		}
 		.col{
-		display: table-cell;
-		margin : 500px;
+			display: table-cell;
+			margin : 500px;
 		}
-		</style>
-		
-		<script type="text/javascript">
+	</style>
 
-    function show(id) {
-       var e = document.getElementById(id);
-          e.style.display = 'block';
-    }
-	
-	function hide(id) {
-		var e = document.getElementById(id);
-		e.style.display ='none';
+	<script type="text/javascript">
+
+		function show(id) {
+			var e = document.getElementById(id);
+			e.style.display = 'block';
 		}
-</script>
-		</head>
-	
-	<body>
+
+		function hide(id) {
+			var e = document.getElementById(id);
+			e.style.display ='none';
+		}
+	</script>
+</head>
+
+<body>
 
 
 
-		<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1> 
-		<h2> <font color ="gold"> Dining Dollars </font> </h2>
-		<a href="Index.html"> <b>Home Page</b></a> | <a href="MealPlans.html"> <b>Meal Plans</b></a></center>
+<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1>
+	<h2> <font color ="gold"> Dining Dollars </font> </h2>
+	<a href="Index.html"> <b>Home Page</b></a> | <a href="MealPlans.html"> <b>Meal Plans</b></a></center>
 </br>
-		<div id= "container" style="width:100%">
-			<div class="row">
-				<div class="col" style= "padding left: 20px; vertical-align: top;  horizontal-align: space-around;">
-				<h3>Information</h3>
-					<ul>
-						<li>All students have access to Dining Dollars</li>
-						<li>Anyone can fund a students Dining Dollars</li>
-						<li>Can be used all around campus</li>
-						<a href="DiningDollars.html"> <b>View more info on our new Dining Dollars</b></a>
-			</div>
-				
-				<div class="col" style="padding right: 200px; vertical-align: top;">
-					<h3>Meal Plans</h3>
-						<ul style="">
-							<li>Everybody has access to meal plans </li>
-							<li>Several different meal plan options</li>
-							<li>Can be used widely across campus</li>
-							<a href="MealPlans.html"> <b>View more info on our Meal Plans</b></a>
-								
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-				<button onclick="show('CheckBalance'); hide('Add');"><h3>Check Balance</h3></button>
-				
-				</div>
-				<div class="col">
-				<button onclick="show('Add'); hide('CheckBalance');"><h3>Add Funds</h3></button>
-				</div>
+<div id= "container" style="width:100%">
+	<div class="row">
+		<div class="col" style= "padding left: 20px; vertical-align: top;  horizontal-align: space-around;">
+			<h3>Information</h3>
+			<ul>
+				<li>All students have access to Dining Dollars</li>
+				<li>Anyone can fund a students Dining Dollars</li>
+				<li>Can be used all around campus</li>
+				<a href="DiningDollars.html"> <b>View more info on our new Dining Dollars</b></a>
 		</div>
-		<div id="CheckBalance" style="display:none">
-				<form>
-				Students email address
-				<input type = "Text" name="email" id="email"></br>
-				Password
-				<input type="Text" name="password" id="password"></br>
-				<button onclick="popUp();"> Check</button>
-				</form>
-			</div>
-		<div id="Add" style="display:none">
-				<form>
-				Students email address
-				<input type = "Text" name="email2" id="email2"></br>
-				Password              
-				<input type="Text" name="password2" id="password2"></br>
-				Dollar Amount to add 
-				<input type="Text" name="amount" id="amount"></br>
-				<button onclick="add();"> Add!</button>
-				</form>
-	</body>
+
+		<div class="col" style="padding right: 200px; vertical-align: top;">
+			<h3>Meal Plans</h3>
+			<ul style="">
+				<li>Everybody has access to meal plans </li>
+				<li>Several different meal plan options</li>
+				<li>Can be used widely across campus</li>
+				<a href="MealPlans.html"> <b>View more info on our Meal Plans</b></a>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<button onclick="show('CheckBalance'); hide('Add');"><h3>Check Balance</h3></button>
+
+		</div>
+		<div class="col">
+			<button onclick="show('Add'); hide('CheckBalance');"><h3>Add Funds</h3></button>
+		</div>
+	</div>
+	<div id="CheckBalance" style="display:none">
+		<form>
+			Students email address
+			<input type = "Text" name="email" id="email"></br>
+			Password
+			<input type="Text" name="password" id="password"></br>
+			<button onclick="popUp();"> Check</button>
+		</form>
+	</div>
+	<div id="Add" style="display:none">
+		<form>
+			Students email address
+			<input type = "Text" name="email2" id="email2"></br>
+			Password
+			<input type="Text" name="password2" id="password2"></br>
+			Dollar Amount to add
+			<input type="Text" name="amount" id="amount"></br>
+			<button onclick="add();"> Add!</button>
+		</form>
+</body>
 </html>
