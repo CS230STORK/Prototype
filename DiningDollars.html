@@ -1,13 +1,21 @@
 <!Doctype html>
 <html>
-<head>
-	<script>
+	<head> 
+		<script>
 		function popUp() {
-			alert("The balance for " + document.getElementById('email').value + " is $" + (Math.random()*100).toFixed(2) + ".");
+			var password = document.getElementById('password').value;
+			var email = document.getElementById('email').contains('@');
+			if(email && (password == 'password')){
+				alert("The balance for " + document.getElementById('email').value + " is $" + (Math.random()*100).toFixed(2) + ".");
+				}
+			else{
+				alert("Either the password or email address you entered is incorrect.");
+			}
 		}
-
-	</script>
-	<script>
+		
+		</script>
+		<script>
+		function add(){
 			var answer = confirm("Are you sure you want to add money to $"+ document.getElementById('amount').value +" to " + document.getElementById('email2').value +"'s account?" );
 			if(answer){
 				alert("You successfully added $" + document.getElementById('amount').value + " to " + document.getElementById('email2').value +"'s account");
@@ -16,96 +24,126 @@
 				alert("No money was added to " + document.getElementById('email2').value +"'s account");
 			}
 		}
-
-	</script>
-
-
+		
+		</script>
+		
+		
 	<style type = "text/css">
 		#container {
-			display: table;
+		display: table;
+		align-content: left;
 		}
 		.row{
-			display: table-row;
-			padding: 15px;
+		display: table-row;
+		padding 15px
 		}
 		.col{
-			display: table-cell;
-			margin : 500px;
+		display: table-cell;
+		margin : 500px;
 		}
-	</style>
-
-	<script type="text/javascript">
-
-		function show(id) {
-			var e = document.getElementById(id);
-			e.style.display = 'block';
+		h4{
+			margin-bottom:5px;
 		}
-
-		function hide(id) {
-			var e = document.getElementById(id);
-			e.style.display ='none';
+		li{
+			margin-bottom:10px;
 		}
-	</script>
-</head>
+		</style>
+		
+		<script type="text/javascript">
 
-<body>
+    function show(id) {
+       var e = document.getElementById(id);
+          e.style.display = 'block';
+    }
+	
+	function hide(id) {
+		var e = document.getElementById(id);
+		e.style.display ='none';
+		}
+</script>
+		</head>
+	
+	<body>
 
 
 
-<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1>
-	<h2> <font color ="gold"> Dining Dollars </font> </h2>
-	<a href="Index.html"> <b>Home Page</b></a> | <a href="MealPlans.html"> <b>Meal Plans</b></a></center>
+		<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1> 
+		<h2> <font color ="Orange"> Dining Dollars </font> </h2>
+		<a href="file:///Users/shogan94/Desktop/Index.html"> <b>Home Page</b></a> | <a href="file:///Users/shogan94/Desktop/MealPlans.html"> <b>Meal Plans</b></a></center>
 </br>
-<div id= "container" style="width:100%">
-	<div class="row">
-		<div class="col" style= "padding-left: 20px; vertical-align: top;  horizontal-align: space-around;">
-			<h3>Information</h3>
-			<ul>
-				<li>All students have access to Dining Dollars</li>
-				<li>Anyone can fund a students Dining Dollars</li>
-				<li>Can be used all around campus</li>
-				<a href="DiningDollars.html"> <b>View more info on our new Dining Dollars</b></a>
-			</ul>
+		<div id= "container" style="width:90%; margin:15px;">
+			<div class="row">
+				<div class="col" style= "padding left: 20px; vertical-align: top;  horizontal-align: space-around;">
+				<h3>Information</h3>
+					<ul>
+						<li><h4>All students have access to Dining Dollars</h4><font size="3;"> Every student that is enrolled in Morgantown College is eligible for Dining Dollars. Dining Dollars are only available to students of Morgantown College.</font></li>
+							
+						<li><h4>Anyone can fund a students Dining Dollars</h4> <font size="3";> Anybody can add money to anybodies Dining Dollars account. This makes it very easy for Parents or relatives to give students money and know that it will be spent appropriately and responsibly.</font> </li>
+							
+						<li><h4>Can be used all around campus</h4><font size="3";> Dining Dollars can be used just like cash at many different stores. They can be used at all the food vendors that accept our new <a href="file:///Users/shogan94/Desktop/MealPlans.html"> <b> <font size="3">Meal Plans </font></b></a>, as well as other stores located on Morgantown College's campus.' </font></li>
+						
+			</div>
+				
+			</div>
+			<div class="row">
+				<div class="col">
+				<button onclick="show('CheckBalance'); hide('Add');"><h3>Check Balance</h3></button>
+				
+				</div>
+				<div class="col">
+				<button onclick="show('Add'); hide('CheckBalance');"><h3>Add Funds</h3></button>
+				</div>
 		</div>
-
-		<div class="col" style="padding-right: 200px; vertical-align: top;">
-			<h3>Meal Plans</h3>
-			<ul>
-				<li>Everybody has access to meal plans </li>
-				<li>Several different meal plan options</li>
-				<li>Can be used widely across campus</li>
-				<a href="MealPlans.html"> <b>View more info on our Meal Plans</b></a>
-			</ul>
-
+		<div id="CheckBalance" style="display:none">
+				<form>
+					<div class="row">
+						<div class = "col">
+				Students email address:
+			</div>
+			<div class="col">
+				<input type = "Text" name="email" id="email"></br>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col">
-			<button onclick="show('CheckBalance'); hide('Add');"><h3>Check Balance</h3></button>
-
+		<div class="row">
+			<div class="col">
+				Password: 
+			</div>
+			<div class="col">
+				<input type="Text" name="password" id="password"></br>
+			</div>
 		</div>
-		<div class="col">
-			<button onclick="show('Add'); hide('CheckBalance');"><h3>Add Funds</h3></button>
+				<button onclick="popUp();"> Check</button>
+			</div>
+				</form>
+			</div>
+		<div id="Add" style="display:none">
+				<form>
+					<div class="row">
+						<div class="col">
+				Students email address: 
+			</div>
+			<div class ="col">
+				<input type = "Text" name="email2" id="email2"></br>
+			</div>
 		</div>
-	</div>
-	<div id="CheckBalance" style="display: none">
-		<form>
-			Students email address
-			<input type = "Text" name="email" id="email"></br>
-			Password
-			<input type="Text" name="password" id="password"></br>
-			<button onclick="popUp();"> Check</button>
-		</form>
-	</div>
-	<div id="Add" style="display:none">
-		<form>
-			Students email address
-			<input type = "Text" name="email2" id="email2"></br>
-			Password
-			<input type="Text" name="password2" id="password2"></br>
-			Dollar Amount to add
-			<input type="Text" name="amount" id="amount"></br>
-			<button onclick="add();"> Add!</button>
-		</form>
-</body>
+			<div class = "row">
+				<div class = "col">
+				Password:     
+			</div>
+			<div class ="col">          
+				<input type="Text" name="password2" id="password2"></br>
+			</div>
+		</div>
+			<div class = "row">
+				<div class = "col">
+				Dollar Amount to add:  
+			</div>
+			<div class = "col">
+				<input type="Text" name="amount" id="amount"></br>
+			</div>
+		</div>
+				<button onclick="add();"> Add!</button>
+			</div>
+				</form>
+	</body>
 </html>
