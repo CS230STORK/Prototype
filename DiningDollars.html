@@ -8,8 +8,13 @@
 
 	</script>
 	<script>
-		function add(){
-			confirm("Are you sure you want to add $"+ document.getElementById('amount').value +" to " + document.getElementById('email2').value +"'s account?" );
+			var answer = confirm("Are you sure you want to add money to $"+ document.getElementById('amount').value +" to " + document.getElementById('email2').value +"'s account?" );
+			if(answer){
+				alert("You successfully added $" + document.getElementById('amount').value + " to " + document.getElementById('email2').value +"'s account");
+			}
+			else{
+				alert("No money was added to " + document.getElementById('email2').value +"'s account");
+			}
 		}
 
 	</script>
