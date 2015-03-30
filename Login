@@ -1,0 +1,268 @@
+<!Doctype html>
+<html>
+	<head> 
+		<script>
+		function createCookie(name,value,days) {
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime()+(days*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+			}
+			else var expires = "";
+			document.cookie = name+"="+value+expires+"; path=/";
+		}
+		</script> 
+		
+		
+		<script>
+		function showForm(){
+			show("Form"); hide("container");
+			}
+		</script>
+		
+		<script>
+		function Login() {
+			var password = document.getElementById('password').value;
+			var email = document.getElementById('email').value;
+			var bool = document.getElementById('email').value;
+			
+			var pos = email.indexOf("@");
+			var pos2 = email.indexOf(".com"); 
+			if(pos == -1 || pos2 == -1){
+				alert("Please enter a valid email address"); 
+			}
+			else if((password == 'student')){
+				alert("Your a student");
+				}
+			else if(password == 'teacher'){
+				alert("Your a teacher");
+			}
+			else if(password == 'public'){
+				alert("Your from the public");
+			}
+			else if(password == 'staff'){
+				alert("get to work!");
+			}
+			else{
+				alert("The password you have entered is invalid.");
+			}
+			
+		}
+		
+		</script>
+		
+	<style type = "text/css">
+		#container {
+		display: table;
+		align-content: left;
+		}
+		.row{
+		display: table-row;
+		padding 15px
+		}
+		.col{
+		display: table-cell;
+		margin : 500px;
+		}
+		</style>
+		
+		<script type="text/javascript">
+
+    function show(id) {
+       var e = document.getElementById(id);
+          e.style.display = 'block';
+    }
+	
+	function hide(id) {
+		var e = document.getElementById(id);
+		e.style.display ='none';
+		}
+</script>
+		
+		</head>
+	
+	<body>
+
+		<center> <h1> Welcome to <font color="blue"> MORGANTOWN COLLEGE </font> </h1> </center>
+	</br>
+</br>
+			<center><div id="container">
+				<div class="row">
+					<div class="col">
+						<div id= "login" style="padding-right:200px;" style="display:show">
+							<h2>Login</h2>
+											<div class="row">
+												<div class="col">
+													Username:
+												</div>
+												<div class="col">
+													<input type="Text" placeholder="email address" name="email" id="email"></br>
+												</div>
+											</div>
+					
+											<div class="row">
+												<div class="col">
+													Password:
+												</div>
+												<div class="col">
+													<input type="Password" placeholder="Password" name="Password" id="password"></br>
+												</div>
+											</div>
+					
+											<div class="row">
+												<div class="col">
+												</div>
+												<div class="col">
+													<button onclick="Login(); putCookie();"> Login!</button>
+												</div>
+											</div>
+					
+										</div>
+					</div>
+					<div class="col">
+						
+						<div id="addMoney" style="display:show">
+							<h2>Benefactor's add money here</h2>
+							<div class="row">
+								<div class="col">
+									Student email address: 
+								</div>
+								<div class="col">
+									<input type="Password" placeholder="Students email" name="emails" id="email2"></br>
+								</div>
+							</div>
+							<div class="row">
+								<button onclick="showForm();"> Add Money</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></center>
+
+			<center><div id="Form" style="display:none;">
+				<center><h2> To Finish Adding Money Please Complete This Form </h2></center>
+				
+				<div class="row">
+					<div class="col">
+						First Name: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="firstName" id="firstName"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						Last Name: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="lastName" id="lastName"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						Email: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="email3" id="email3"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						Confirm email: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="confirmEmail" id="confirmEmail"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						Address 1: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="address1" id="address1"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						Address 2: 
+					</div>
+					<div class="col">
+						<input type="Text"  name="address2" id="address2"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						City: 
+					</div>
+					<div class="col">
+						<input type="Text" name="City" id="City"></br></br>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col">
+						State:  
+					</div>
+					<div class="col">
+						<input type="Text" name="state" id="state" maxlength="2" size="2"></br></br>
+					</div>
+				</div>
+							
+			<div class="row">
+				<div class="col">
+					Zip Code 
+				</div>
+				<div class="col">
+					<input type="text" name="zip" id="zip" size="5"></br></br>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					Phone Number:  
+				</div>
+				<div class="col">
+					<input type="text" name="phone" id="phone"></br></br>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					Credit Card Number:  
+				</div>
+				<div class="col">
+					<input type="text"  name="cardNumber" id="cardNumber"></br></br>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					Exp. Date 
+				</div>
+				<div class="col">
+					<input type="Text" placeholder="Month" name="month" id="month"> <input type="Text" placeholder="Year" name="year" id="year" size="4"></br></br>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col">
+					Security Code 
+				</div>
+				<div class="col">
+					<input type="text"  name="code" id="code" maxlength="3" size="3"></br></br>
+				</div>
+			</div>
+			
+			<button onclick="Submit();">Submit</button>
+		</div></center>
+			
+
+		
+	</body>
+</html>
