@@ -4,8 +4,10 @@
 		<script>
 		function popUp() {
 			var password = document.getElementById('password').value;
-			var email = document.getElementById('email').contains('@');
-			if(email && (password == 'password')){
+			var email = document.getElementById('email').value;
+			var pos = email.indexOf('@');
+			
+			if(pos != -1 && (password == 'password')){
 				alert("The balance for " + document.getElementById('email').value + " is $" + (Math.random()*100).toFixed(2) + ".");
 				}
 			else{
@@ -61,7 +63,6 @@
 		</style>
 		
 		<script type="text/javascript">
-
     function show(id) {
        var e = document.getElementById(id);
           e.style.display = 'block';
@@ -127,7 +128,7 @@
 				Password: 
 			</div>
 			<div class="col">
-				<input type="Text" name="password" id="password"></br>
+				<input type="password" name="password" id="password"></br>
 			</div>
 		</div>
 				<button onclick="popUp();"> Check</button>
@@ -149,7 +150,7 @@
 				Password:     
 			</div>
 			<div class ="col">          
-				<input type="Text" name="password2" id="password2"></br>
+				<input type="password" name="password2" id="password2"></br>
 			</div>
 		</div>
 			<div class = "row">
