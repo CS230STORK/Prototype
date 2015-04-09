@@ -21,7 +21,94 @@
 		
 		<script>
 		function showForm(){
-			show("Form"); hide("container");
+			var email = document.getElementById('email2').value;
+			var amount = document.getElementById('amount').value;
+			
+			var pos = email.indexOf('@');
+			var message = "";
+			
+			if(pos == -1){
+				message += "error: invalid email address.\n";
+			}
+			if(amount == ""){
+				message += "error: invalid amount.";
+			}
+			if(message == ""){
+				show("Form"); hide("container"); 
+				personalizeHeader();
+			}
+			else{
+				alert(message);
+			}
+			}
+		</script>
+		
+		<script>
+			function Submit(){
+				var firstName = document.getElementById('firstName').value;
+				var lastName = document.getElementById('lastName').value;
+				var email = document.getElementById('email3').value;
+				var confirmEmail = document.getElementById('confirmEmail').value;
+				var address = document.getElementById('address1').value;
+				var city = document.getElementById('City').value;
+				var state = document.getElementById('state').value;
+				var zip = document.getElementById('zip').value;
+				var phone = document.getElementById('phone').value;
+				var credit = document.getElementById('cardNumber').value;
+				var expMonth = document.getElementById('month').value;
+				var expYear = document.getElementById('year').value;
+				var security = document.getElementById('code').value;
+				
+				var amount = document.getElementById('amount').value;
+				
+				var pos = email.indexOf("@");
+				
+				var message = "";
+				if(firstName == ""){
+					message += "error: first name needed.\n"
+				}
+				if(lastName == ""){
+					message += "error: last name needed.\n"
+				}
+				if(email != confirmEmail){
+					message += "error: email does not match confirm email.\n"
+				}
+				if(pos == -1){
+					message += "error: invalid email address.\n"
+				}
+				if(address == ""){
+					message+= "error: address needed.\n";
+				}
+				if(city == ""){
+					message+= "error: city needed.\n";
+				}
+				if(state == ""){
+					message+= "error: state needed.\n";
+				}
+				if(zip == ""){
+					message+= "error: zip code needed.\n";
+				}
+				if(phone == ""){
+					message+= "error: phone number needed.\n";
+				}
+				if(credit == ""){
+					message+= "error: credit card number needed.\n";
+				}
+				if(expMonth == ""){
+					message+= "error: expiration month needed.\n";
+				}
+				if(expYear == ""){
+					message+= "error: expiration year needed.\n";
+				}
+				if(security == ""){
+					message+= "error: security code needed.\n";
+				}
+				if(message == ""){
+					alert("You have successfully added $" + amount + " to " + email +"'s account.");
+				}
+				else{
+					alert(message);
+				}
 			}
 		</script>
 		
@@ -54,6 +141,13 @@
 			
 		}
 		
+		</script>
+		
+		<script>
+		function personalizeHeader(){
+			name = document.getElementById('email2').value;
+			document.getElementById("header").innerHTML = "To Finish Adding Money to " + name + "'s Account Please Complete This Form";
+		}
 		</script>
 		
 	<style type = "text/css">
@@ -101,7 +195,7 @@
 													Username:
 												</div>
 												<div class="col">
-													<input type="Text" placeholder="email address" name="email" id="email"></br>
+													<input type="email" placeholder="me@example.com" name="email" id="email"></br>
 												</div>
 											</div>
 					
@@ -133,11 +227,19 @@
 									Student email address: 
 								</div>
 								<div class="col">
-									<input type="Password" placeholder="Students email" name="emails" id="email2"></br>
+									<input type="email" placeholder="me@example.com" name="email2" id="email2"></br>
 								</div>
 							</div>
 							<div class="row">
-								<button onclick="showForm();"> Add Money</button>
+								<div class="col">
+									Amount to add: 
+								</div>
+								<div class="col">
+									<input type="Text"  name="amount" id="amount"></br>
+								</div>
+							</div>
+							<div class="row">
+								<button onclick="showForm();"> Add Money </button>
 							</div>
 						</div>
 					</div>
@@ -145,11 +247,12 @@
 			</div></center>
 
 			<center><div id="Form" style="display:none;">
-				<center><h2> To Finish Adding Money Please Complete This Form </h2></center>
+				<center> <h2 id="header">  </h2></center>
 				
+				<font color="red" size="2">*</font> <font size="2">fields are requirred.</br> </font>
 				<div class="row">
 					<div class="col">
-						First Name: 
+						First Name:<font color="red">*</font> 
 					</div>
 					<div class="col">
 						<input type="Text"  name="firstName" id="firstName"></br></br>
@@ -158,7 +261,7 @@
 				
 				<div class="row">
 					<div class="col">
-						Last Name: 
+						Last Name:<font color="red">*</font>
 					</div>
 					<div class="col">
 						<input type="Text"  name="lastName" id="lastName"></br></br>
@@ -167,7 +270,7 @@
 				
 				<div class="row">
 					<div class="col">
-						Email: 
+						Email:<font color="red">*</font> 
 					</div>
 					<div class="col">
 						<input type="Text"  name="email3" id="email3"></br></br>
@@ -176,7 +279,7 @@
 				
 				<div class="row">
 					<div class="col">
-						Confirm email: 
+						Confirm email:<font color="red">*</font> 
 					</div>
 					<div class="col">
 						<input type="Text"  name="confirmEmail" id="confirmEmail"></br></br>
@@ -185,7 +288,7 @@
 				
 				<div class="row">
 					<div class="col">
-						Address 1: 
+						Address 1:<font color="red">*</font> 
 					</div>
 					<div class="col">
 						<input type="Text"  name="address1" id="address1"></br></br>
@@ -203,7 +306,7 @@
 				
 				<div class="row">
 					<div class="col">
-						City: 
+						City:<font color="red">*</font> 
 					</div>
 					<div class="col">
 						<input type="Text" name="City" id="City"></br></br>
@@ -212,7 +315,7 @@
 				
 				<div class="row">
 					<div class="col">
-						State:  
+						State:<font color="red">*</font>  
 					</div>
 					<div class="col">
 						<input type="Text" name="state" id="state" maxlength="2" size="2"></br></br>
@@ -221,16 +324,16 @@
 							
 			<div class="row">
 				<div class="col">
-					Zip Code 
+					Zip Code:<font color="red">*</font> 
 				</div>
 				<div class="col">
-					<input type="text" name="zip" id="zip" size="5"></br></br>
+					<input type="text" name="zip" id="zip" maxlength="5" size="5"></br></br>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col">
-					Phone Number:  
+					Phone Number:<font color="red">*</font>  
 				</div>
 				<div class="col">
 					<input type="text" name="phone" id="phone"></br></br>
@@ -239,7 +342,7 @@
 			
 			<div class="row">
 				<div class="col">
-					Credit Card Number:  
+					Credit Card Number:<font color="red">*</font>  
 				</div>
 				<div class="col">
 					<input type="text"  name="cardNumber" id="cardNumber"></br></br>
@@ -248,16 +351,16 @@
 			
 			<div class="row">
 				<div class="col">
-					Exp. Date 
+					Exp. Date:<font color="red">*</font> 
 				</div>
 				<div class="col">
-					<input type="Text" placeholder="Month" name="month" id="month"> <input type="Text" placeholder="Year" name="year" id="year" size="4"></br></br>
+					<input type="Text" placeholder="Month" name="month" id="month"> <input type="Text" placeholder="Year" name="year" id="year" maxlength="4" size="4"></br></br>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col">
-					Security Code 
+					Security Code:<font color="red">*</font> 
 				</div>
 				<div class="col">
 					<input type="text"  name="code" id="code" maxlength="3" size="3"></br></br>
