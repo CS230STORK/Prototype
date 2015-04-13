@@ -1,17 +1,7 @@
 <!Doctype html>
 <html>
 	<head> 
-		<script>
-		function createCookie(name,value,days) {
-			if (days) {
-				var date = new Date();
-				date.setTime(date.getTime()+(days*24*60*60*1000));
-				var expires = "; expires="+date.toGMTString();
-			}
-			else var expires = "";
-			document.cookie = name+"="+value+expires+"; path=/";
-		}
-		</script> 
+		
 		
 		<script>
 			function Cancel(){
@@ -118,31 +108,38 @@
 			var email = document.getElementById('email').value;
 			var bool = document.getElementById('email').value;
 			
+			
 			var pos = email.indexOf("@");
 			var pos2 = email.indexOf(".com"); 
+			
 			if(pos == -1 || pos2 == -1){
 				alert("Please enter a valid email address"); 
 			}
 			else if((password == 'student')){
-				alert("Your a student");
-				}
+				alert("Youre a student");
+			}
 			else if(password == 'teacher'){
-				alert("Your a teacher");
+				alert("Youre a teacher");
 			}
 			else if(password == 'public'){
-				alert("Your from the public");
+				createCookie("password", password);
+				alert("Youre from the public");
 			}
 			else if(password == 'staff'){
-				alert("get to work!");
+				createCookie("password", password);
+				alert("Youre staff");
 			}
 			else{
 				alert("The password you have entered is invalid.");
 			}
-			
 		}
-		
 		</script>
 		
+		<script>
+		function Register(){
+			window.open("/Users/shogan94/Desktop/CS\ 230\ Project/MealPlans.html");
+		}
+		</script>
 		<script>
 		function personalizeHeader(){
 			name = document.getElementById('email2').value;
@@ -210,12 +207,12 @@
 					
 											<div class="row">
 												<div class="col">
+													<button onclick="Register();"> Register</button>
 												</div>
 												<div class="col">
-													<button onclick="Login(); putCookie();"> Login!</button>
+													<button onclick="Login();"> Login!</button>
 												</div>
 											</div>
-					
 										</div>
 					</div>
 					<div class="col">
@@ -370,7 +367,5 @@
 			<button onclick="Submit();"> Submit </button>  <button onclick="Cancel();"> Cancel </button>
 		</div></center>
 			
-
-		
 	</body>
 </html>
