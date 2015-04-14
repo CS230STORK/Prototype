@@ -5,6 +5,7 @@ function generateFader(elem) {
         var s = window.getComputedStyle(e);
         return +!(s.display === 'none' || s.opacity === '0');
     }
+
     function fader(duration) {
         var step, aStep, fn, thisID = ++current, vis = visible(elem);
         window.clearTimeout(t);
@@ -36,6 +37,7 @@ function generateFader(elem) {
         inProgress = 1; // mark started
         fn();           // start
     }
+
     return fader;
 }
 
@@ -49,7 +51,7 @@ window.addEventListener(
                 fader(500);
             }
         );
-            var fader = generateFader(document.getElementById('meals-link'));
+        var fader = generateFader(document.getElementById('meals-link'));
         document.getElementById('meals-content').addEventListener(
             'click',
             function () {
