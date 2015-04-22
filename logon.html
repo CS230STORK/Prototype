@@ -21,6 +21,20 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
+    
+    <script>
+	function redirect() {
+		var password = document.getElementById('AccountPassword').value;
+		if(password == 'student' || password == 'staff'|| password == 'faculty' || password == 'public'){
+	  	  window.location='home.html';
+		}
+		else if(password == 'admin'){
+			window.location='benefactor.html'
+		}
+	  return false;
+	}
+	</script>
+    
 </head>
 <body id="top">
 
@@ -42,21 +56,23 @@
         <p>Food Services</p>
     </header>
     <div class="container">
-
-    <section>
+   <section>
             <h2>Login</h2>
-
             <form>
                 Account Email:
                 <input type="text" name="AccountEmail" id="AccountEmail" placeholder="aaa@stork.mc.edu"
                        autocomplete="on">
                 <br>
                 Password:
-                <input type="text" name="AccountPassword" id="AccountPassword" autocomplete="off">
+                <input type="password" name="AccountPassword" id="AccountPassword" autocomplete="off">
                 <br>
-                <input type="submit">
+                <input type="submit" onclick="return redirect();">
             </form>
-        </section>
+    </section>
+	<section>
+			<form action="benefactor.html">
+			<input type="submit" value ="Benefactors Add Money Here">
+	</section>
     </div>
 </section>
 
