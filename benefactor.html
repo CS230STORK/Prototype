@@ -21,6 +21,14 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
+    <script>
+	function confirmation(){
+		var studentEmail = document.getElementById('StudentsEmailForDeposit').value;
+		var amount = document.getElementById('value').value;
+		alert("Successfully added $"+ amount +" to " + studentEmail + "'s account.");
+	}
+	</script>
+    
 </head>
 <body id="top">
 
@@ -54,15 +62,12 @@
                 <input type="text" name="LastName" id="LastName"
                        placeholder="Last Name" autocomplete="on">
                 <br>
-                Email:
-                <input type="text" name="AccountEmailForDeposit" id="AccountEmailForDeposit"
+                Students Email:
+                <input type="text" name="StudentsEmailForDeposit" id="StudentsEmailForDeposit"
                        placeholder="aaa@stork.mc.edu" autocomplete="on">
                 <br>
-                Address:
-                <input type="text" name="Street" id="Street"
-                       placeholder="Street" autocomplete="on">
                 Deposit Amount:
-                <select>
+                <select name="value" id="value">
                     <option value="10">$10.00</option>
                     <option value="20">$20.00</option>
                     <option value="50">$50.00</option>
@@ -71,11 +76,34 @@
                     <option value="500">$500.00</option>
                 </select>
                 <br>
+                Email:
+                <input type="text" name="AccountEmailForDeposit" id="AccountEmailForDeposit"
+                       placeholder="aaa@stork.mc.edu" autocomplete="on">
+                <br>
+                Address:
+                <input type="text" name="Street" id="Street"
+                       placeholder="Street" autocomplete="on">
+                <br>
+                City:
+                <input type="text" name="City" id="City"
+                       placeholder="City" autocomplete="on">
+                <br>
+                State:
+                <input type="text" name="State" id="State"
+                       placeholder="State" autocomplete="on">
+                <br>
+                Zip Code:
+                <input type="text" name="Zip" id="Zip"
+                       placeholder="Zip" autocomplete="on">
+                <br>
                 Credit Card:
                 <input type="text" name="creditcard" id="creditcard" placeholder="XXXX XXXX XXXX XXXX"
                        autocomplete="off">
                 <br>
-                <input type="submit">
+                Security Code:
+                <input type="text" name="security" id="security" placeholder="XXX" 
+                       autocomplete="off">
+                <input type="submit" onclick= "confirmation()">
             </form>
         </section>
     </div>
