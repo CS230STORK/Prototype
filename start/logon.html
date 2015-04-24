@@ -26,7 +26,7 @@
 	function redirect() {
 		var password = document.getElementById('AccountPassword').value;
 		if(password == 'student' || password == 'staff'|| password == 'faculty' || password == 'public'){
-	  	  window.location='home.html';
+            window.location = 'student/home.html';
 		}
 		else if(password == 'admin'){
 			window.location='../benefactor.html'
@@ -40,7 +40,7 @@
 
 <!-- Header -->
 <header id="header" class="skel-layers-fixed">
-    <h1><a href="stork.html">STORK SYSTEMS</a></h1>
+    <h1><a href="student/stork.html">STORK SYSTEMS</a></h1>
     <nav id="nav">
         <ul>
             <li><a href="logon.html.html">Back to Log In Page</a></li>
