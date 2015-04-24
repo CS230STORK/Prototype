@@ -11,25 +11,25 @@
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <!--[if lte IE 8]>
-    <script src="../js/html5shiv.js"></script><![endif]-->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/skel.min.js"></script>
-    <script src="../js/skel-layers.min.js"></script>
-    <script src="../js/init.js"></script>
+    <script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
     <noscript>
-        <link rel="stylesheet" href="../css/skel.css"/>
-        <link rel="stylesheet" href="../css/style.css"/>
-        <link rel="stylesheet" href="../css/style-xlarge.css"/>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
     
     <script>
 	function redirect() {
 		var password = document.getElementById('AccountPassword').value;
 		if(password == 'student' || password == 'staff'|| password == 'faculty' || password == 'public'){
-            window.location = 'student/home.html';
+            window.location = 'studenthome.html';
 		}
 		else if(password == 'admin'){
-            window.location = 'benefactor/benefactor.html'
+            window.location = 'benefactor.html'
 		}
 	  return false;
 	}
@@ -40,7 +40,7 @@
 
 <!-- Header -->
 <header id="header" class="skel-layers-fixed">
-    <h1><a href="student/stork.html">STORK SYSTEMS</a></h1>
+    <h1><a href="stork.html">STORK SYSTEMS</a></h1>
     <nav id="nav">
         <ul>
             <li><a href="logon.html.html">Back to Log In Page</a></li>
@@ -70,7 +70,7 @@
             </form>
     </section>
 	<section>
-        <form action="benefactor/benefactor.html">
+        <form action="benefactor.html">
 			<input type="submit" value ="Benefactors Add Money Here">
 	</section>
     </div>
