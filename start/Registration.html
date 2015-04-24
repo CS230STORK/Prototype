@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Ion by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+    <title>Login - STORK</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-xlarge.css"/>
+    </noscript>
+    <script>
+	function confirmation(){
+		var studentEmail = document.getElementById('StudentsEmailForDeposit').value;
+		var amount   = document.getElementById('value').value;
+		alert("Successfully added $"+ amount +" to " + studentEmail + "'s account.");
+	}
+	</script>
+    
+</head>
+<body id="top">
+
+<!-- Header -->
+<header id="header" class="skel-layers-fixed">
+    <h1><a href="stork.html">STORK SYSTEMS</a></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="mplan.html">Meal Plan</a></li>
+            <li><a href="ddollars.html">Dining Dollars</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main -->
+<section id="main" class="wrapper style1">
+    <header class="major">
+        <h2>Morgantown College</h2>
+
+        <p>Food Services</p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Add Funds</h2>
+
+            <form>
+                Name:
+                <input type="text" name="FirstName" id="FirstName"
+                       placeholder="First Name" autocomplete="on">
+                <input type="text" name="LastName" id="LastName"
+                       placeholder="Last Name" autocomplete="on">
+                <br>
+                Students Email:
+                <input type="text" name="StudentsEmailForDeposit" id="StudentsEmailForDeposit"
+                       placeholder="aaa@stork.mc.edu" autocomplete="on">
+                <br>
+                Deposit Amount:
+                <select name="value" id="value">
+                    <option value="10">$10.00</option>
+                    <option value="20">$20.00</option>
+                    <option value="50">$50.00</option>
+                    <option value="100">$100.00</option>
+                    <option value="250">$250.00</option>
+                    <option value="500">$500.00</option>
+                </select>
+                <br>
+                Email:
+                <input type="text" name="AccountEmailForDeposit" id="AccountEmailForDeposit"
+                       placeholder="aaa@stork.mc.edu" autocomplete="on">
+                <br>
+                Address:
+                <input type="text" name="Street" id="Street"
+                       placeholder="Street" autocomplete="on">
+                <br>
+                City:
+                <input type="text" name="City" id="City"
+                       placeholder="City" autocomplete="on">
+                <br>
+                State:
+                <input type="text" name="State" id="State"
+                       placeholder="State" autocomplete="on">
+                <br>
+                Zip Code:
+                <input type="text" name="Zip" id="Zip"
+                       placeholder="Zip" autocomplete="on">
+                <br>
+                Credit Card:
+                <input type="text" name="creditcard" id="creditcard" placeholder="XXXX XXXX XXXX XXXX"
+                       autocomplete="off">
+                <br>
+                Security Code:
+                <input type="text" name="security" id="security" placeholder="XXX" 
+                       autocomplete="off">
+                <input type="submit" onclick= "confirmation()">
+            </form>
+        </section>
+    </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li>
+            <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+            <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
