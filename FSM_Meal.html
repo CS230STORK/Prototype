@@ -51,11 +51,7 @@
             <div class="8u">
                 <section>
 
-                    <h2>Meal Plan</h2>
-
-                    <h3>Administrative Operations</h3>
-
-                    <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""/></a>
+                    <h2>Administrative Operations</h2>
 
                     <div id="op">
                         <h3>Meal Plan #1</h3>
@@ -113,8 +109,31 @@
                 <hr/>
                 <section>
                     <div id="editList">
-                        <h3>Meal Plan Options</h3>
-                        <a href="#" class="special button">Edit Meal Options</a>
+                        <a href="#" class="special button" onclick="show('editPlan')">Edit Meal Options</a>
+                    </div>
+                    <hr/>
+                    <div id="editPlan" style="display: none">
+                        <h3>Edit Meal Plan</h3>
+
+                        <form method="get">
+
+                            Delete:
+                            <select>
+                                <option value="MP1">Meal Plan #1 (B/L/D)</option>
+                                <option value="MP2">Meal Plan #2 (B/L)</option>
+                                <option value="MP3">Meal Plan #3 (B/D)</option>
+                                <option value="MP4">Meal Plan #4 (L/D)</option>
+                                <option value="MP5">Meal Plan #5 (B)</option>
+                                <option value="MP6">Meal Plan #6 (L)</option>
+                                <option value="MP7">Meal Plan #7 (D)</option>
+                            </select>
+                            <br>
+                            Add New:
+                            <input type="text" name="mealplanname" placeholder="Plan Name">
+                            <input type="text" name="option" placeholder="Options">
+                            <br>
+                            <input type="submit">
+                        </form>
                     </div>
                 </section>
             </div>
