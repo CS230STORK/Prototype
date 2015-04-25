@@ -104,16 +104,16 @@
 	              ['DEC',  39085, 12341]
 	            ]);
 	            // Set chart options
-	             var options = {'title':'Types of Payment',
-	                           'width':700,
-	                           'height':500,
+	            var options = {'title':'Types of Payment',
+	                           'width':900,
+	                           'height':900,
 				slices: {  3: {offset: 0.2}}
 	                               
 	                     };
 	            // Set chart options
 	            var options2 = {'title':'Types of Customer',
-	                           'width':700,
-	                           'height':500,
+	                           'width':900,
+	                           'height':900,
 						 slices:{ 1: {offset:0.2}}
 					 };
 	            // Set chart options
@@ -182,20 +182,25 @@
         <h2>Morgantown College</h2>
 
         <p>Sales Report</p>
-		<a href="#" onclick ="show('chart_div'); hide('char_div2'); hide('chart_div3');" class="button alt">Form of Payment</a>
-		<a href="#" onclick ="show('chart_div2'); hide('char_div'); hide('chart_div3');"class="button alt">Customer Types</a>
-		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Weekly Sales</a>
-		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Monthly Sales</a>
-		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Yearly Sales</a>
+		<a href="#form"  class="button alt">Form of Payment</a>
+		<a href="#type" class="button alt">Customer Types</a>
+		<a href="#week" class="button alt">Weekly Sales</a>
+		<a href="#month" class="button alt">Monthly Sales</a>
+		<a href="#year" class="button alt">Yearly Sales</a>
 		
     </header>
     <div class="container">
         <section>
 			<center>
-			<div id="chart_div" style="display:none"></div>			
-			<div id="chart_div2" style="display:none"></div>
-			<div id="chart_div3" style="display:none" ></div>
+			<a Name = "form">
+			<div id="chart_div" ></div>
+			<a Name = "type">			
+			<div id="chart_div2" ></div>
+			<a Name = "week">
+			<div id="chart_div3" ></div>
+			<a Name = "month">
 			<div id="chart_div4"  ></div>
+			<a Name = "year">
 			<div id="chart_div5"  ></div>
 		</center>
 
