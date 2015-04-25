@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Meal Plan - STORK</title>
+    <title>Sales Report - Stork</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -16,24 +16,156 @@
     <script src="js/skel.min.js"></script>
     <script src="js/skel-layers.min.js"></script>
     <script src="js/init.js"></script>
-    <script src="js/hudini.js"></script>
-    <script src="js/david.js"></script>
     <noscript>
         <link rel="stylesheet" href="css/skel.css"/>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
+	
+	<!--Load the AJAX API-->
+	        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	        <script type="text/javascript">
+
+	          // Load the Visualization API and the piechart package.
+	          google.load('visualization', '1.0', {'packages':['corechart']});
+
+	          // Set a callback to run when the Google Visualization API is loaded.
+	          google.setOnLoadCallback(drawChart);
+
+	          // Callback that creates and populates a data table,
+	          // instantiates the pie chart, passes in the data and
+	          // draws it.
+	          function drawChart() {
+
+	            // Create the data table.
+	            var data = new google.visualization.DataTable();
+	            data.addColumn('string', 'Type');    
+	            data.addColumn('number', 'Amount');
+	            data.addRows([
+	              ['Credit Cards', 135],
+	              ['Cash', 90],
+	              ['Meal Plans', 267],
+	              ['Dining Dollars', 163],
+	            ]);
+	            // Create the data table.
+	            var data2 = new google.visualization.DataTable();
+	            data2.addColumn('string', 'Type');
+	            data2.addColumn('number', 'Amount');
+	            data2.addRows([
+	              ['Students', 360],
+	              ['Public', 86],
+	              ['Faculty', 112],
+	              ['Staff', 97],
+	            ]);
+
+	            var data3 = new google.visualization.DataTable();
+	            data3.addColumn('string', 'Year');
+	            data3.addColumn('number', 'Sales');
+	            data3.addColumn('number', 'Expenses');
+	            data3.addRows([
+	              ['Monday', 1000, 400],
+	              ['Tuesday', 1170, 460],
+	              ['Wednesday',  860, 580],
+	              ['Thursday', 1030, 540],
+	              ['Friday', 1170, 460],
+	              ['Saturday',  860, 580],
+	              ['Sunday', 1030, 540]
+	            ]);
+
+	            var data4 = new google.visualization.DataTable();
+	            data4.addColumn('string', 'Year');
+	            data4.addColumn('number', 'Sales');
+	            data4.addColumn('number', 'Expenses');
+	            data4.addRows([
+	              ['1', 1000, 400],['2', 1170, 460],['3',  860, 580],['4', 1030, 540],['5', 1170, 460],['6',  1024, 580],
+	              ['7', 1324, 456],['8', 1140, 480],['9',  1400, 580],['10', 1030, 540],['11', 1170, 460],['12',  1029, 580],
+				  ['13', 1122, 356],['14', 1200, 590],['15',  900, 435],['16', 1430, 640],['17', 1234, 460],['18',  1123, 580],
+				  ['19', 1211, 304],['20', 1240, 460],['21',  950, 456],['22', 1303, 440],['23', 1234, 460],['24',  1123, 580],
+				  ['25', 1321, 500],['26', 1170, 567],['27',  1000, 532],['28', 1220, 540],['29', 1048, 460],['30',  1123, 580],
+					['31', 1423, 400]
+	            ]);
+				
+	            var data5 = new google.visualization.DataTable();
+	            data5.addColumn('string', 'Year');
+	            data5.addColumn('number', 'Sales');
+	            data5.addColumn('number', 'Expenses');
+	            data5.addRows([
+	              ['JAN', 38950, 10200],
+	              ['FEB', 34857, 11260],
+	              ['MAR',  36957, 12080],
+	              ['APR', 36957, 13040],
+	              ['MAY', 19502, 12030],
+	              ['JUN',  18601, 6000],
+	              ['JUL', 19360, 6040],
+	              ['AUG', 27000, 6000],
+	              ['SEP',  38041, 12000],
+	              ['OCT', 37580, 13820],
+	              ['NOV', 38930, 12584],
+	              ['DEC',  39085, 12341]
+	            ]);
+	            // Set chart options
+	            var options = {'title':'Types of Payment',
+	                           'width':700,
+	                           'height':500};
+	            // Set chart options
+	            var options2 = {'title':'Types of Customer',
+	                           'width':700,
+	                           'height':500};
+	            // Set chart options
+	            var options3 = {'title':'Weekly Report',
+	                           'width':1000,
+	                           'height':500};
+	            // Set chart options
+	            var options4 = {'title':'Monthly Report',
+	                           'width':1000,
+	                           'height':500};
+	            // Set chart options
+	            var options5 = {'title':'Yearly Report',
+	                           'width':1000,
+	                           'height':500};
+
+	            // Instantiate and draw our chart, passing in some options.
+	            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+	            chart.draw(data, options);
+	            var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
+	            chart2.draw(data2, options2);
+	            var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
+	            chart3.draw(data3, options3);
+	            var chart4 = new google.visualization.LineChart(document.getElementById('chart_div4'));
+	            chart4.draw(data4, options4);
+	            var chart5 = new google.visualization.LineChart(document.getElementById('chart_div5'));
+	            chart5.draw(data5, options5);
+	          }
+	        </script>
+			  
+		 
+		
+		 <script type="text/javascript">
+
+		     function show(id) {
+		        var e = document.getElementById(id);
+		           e.style.display = 'block';
+		     }
+	
+		 	function hide(id) {
+		 		var e = document.getElementById(id);
+		 		e.style.display ='none';
+		 		}
+		 </script>
+		 
+         
 </head>
 <body id="top">
 
 <!-- Header -->
 <header id="header" class="skel-layers-fixed">
-    <h1><a href="stork.html">STORK SYSTEMS</a></h1>
+    <h1><a href="#">Morgantown College</a></h1>
     <nav id="nav">
         <ul>
-            <li><a href="Student_WelcomePage.html">Welcome</a></li>
-            <li><a href="Student_MealPlan.html">Meal Plan</a></li>
-            <li><a href="Student_DiningDollars.html">Dining Dollars</a></li>
+            <li><a href="LM_Home.html">Home</a></li>
+            <li><a href="LM_Hours.html">Hours</a></li>
+            <li><a href="LM_Trans.html">Transaction History</a></li>
+            <li><a href="LM_Report.html">Sales Report</a></li>
             <li><a href="Grand_Home.html" class="button special">Log out</a></li>
         </ul>
     </nav>
@@ -44,134 +176,24 @@
     <header class="major">
         <h2>Morgantown College</h2>
 
-        <p>Food Services</p>
+        <p>Sales Report</p>
+		<a href="#" onclick ="show('chart_div'); hide('char_div2'); hide('chart_div3');" class="button alt">Form of Payment</a>
+		<a href="#" onclick ="show('chart_div2'); hide('char_div'); hide('chart_div3');"class="button alt">Customer Types</a>
+		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Weekly Sales</a>
+		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Monthly Sales</a>
+		<a href="#" onclick ="show('chart_div3'); hide('char_div2'); hide('chart_div');"class="button alt">Yearly Sales</a>
+		
     </header>
     <div class="container">
-        <div class="row">
-            <div class="8u">
-                <section>
+        <section>
+			<center>
+			<div id="chart_div" style="display:none"></div>			
+			<div id="chart_div2" style="display:none"></div>
+			<div id="chart_div3" style="display:none" ></div>
+			<div id="chart_div4"  ></div>
+			<div id="chart_div5"  ></div>
+		</center>
 
-                    <h2>Meal Plan</h2>
-
-                    <h3>Administrative Operations</h3>
-
-                    <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""/></a>
-
-                    <div id="op">
-                        <h3>Meal Plan #1</h3>
-                        <h4>Three meals a day for three days a week</h4>
-                        <ul>
-                            <li>One(1) breakfast meal</li>
-                            <li>One(1) lunch meal</li>
-                            <li>One(1) dinner meal</li>
-                        </ul>
-                        <h3>Meal Plan #2</h3>
-                        <h4>Two meals a day for five days a week</h4>
-                        <ul>
-                            <li>One(1) breakfast meal</li>
-                            <li>One(1) lunch meal</li>
-                        </ul>
-                        <h3>Meal Plan #3</h3>
-                        <h4>Two meals a day for five days a week</h4>
-                        <ul>
-                            <li>One(1) breakfast meal</li>
-                            <li>One(1) dinner meal</li>
-                        </ul>
-                        <h3>Meal Plan #4</h3>
-                        <h4>Two meals a day for five days a week</h4>
-                        <ul>
-                            <li>One(1) lunch meal</li>
-                            <li>One(1) dinner meal</li>
-                        </ul>
-                        <h3>Meal Plan #5</h3>
-                        <h4>One meal a day for seven days a week</h4>
-                        <ul>
-                            <li>One(1) breakfast meal</li>
-                        </ul>
-                        <h3>Meal Plan #6</h3>
-                        <h4>One meal a day for seven days a week</h4>
-                        <ul>
-                            <li>One(1) lunch meal</li>
-                        </ul>
-                        <h3>Meal Plan #7</h3>
-                        <h4>One meal a day for seven days a week</h4>
-                        <ul>
-                            <li>One(1) dinner meal</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-            <div class="4u">
-                <section>
-                    <h3>Magna massa blandit</h3>
-
-                    <p>Morgantown College is happy to announce that we now offer Meal Plans to Students, faculty,
-                        and even the general public! Students no longer have to eat in their dorms food facility! Meals
-                        Plans work at all campus food locations as well as certain third party restaurants. See below
-                        for more information.</p>
-                </section>
-                <hr/>
-                <section>
-                    <h3>Navigation</h3>
-                    <ul class="alt">
-                        <li><a onclick="show('op');" href="#">Information</a></li>
-                        <li><a onclick="show('editList');" href="#">Edit Meal Plan Options</a></li>
-                    </ul>
-                </section>
-                <section>
-                    <div id="editList" style="display: none">
-                        <h3>Meal Plan Options</h3>
-                        <a href="#" class="special button">Edit Meal Options</a>
-                    </div>
-                </section>
-            </div>
-            <hr class="major"/>
-            <div class="row">
-                <div class="6u">
-                    <section class="special">
-                        <a href="Student_WelcomePage.html" class="image fit"><img src="images/pic01.jpg" alt=""/></a>
-
-                        <h3>Home</h3>
-
-                        <p>Morgantown College has teamed up with STORK SYSTEMS to bring you the most cutting edge in
-                            University food services technology. You will enjoy the variety of new options that are
-                            available to everyone from Students, Faculty, and even Morgantown citizens.</p>
-                        <ul class="actions">
-                            <li><a href="Student_WelcomePage.html" class="button alt">Learn More</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="6u">
-                    <section class="special">
-                        <a href="Student_DiningDollars.html" class="image fit"><img src="images/pic04.jpg"
-                                                                                    alt=""/></a>
-
-                        <h3>Dining Dollars</h3>
-
-                        <p>Students now have the option of Dining Dollars.
-                            This service allows for anyone including Family to deposit directly to their student's
-                            account.
-                            With the help of our new system, these can be used widely across campus.</p>
-                        <ul class="actions">
-                            <li><a href="Student_DiningDollars.html" class="button alt">Learn More</a></li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-            <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-        </ul>
-    </div>
-</footer>
-
+          
 </body>
 </html>
