@@ -104,13 +104,18 @@
 	              ['DEC',  39085, 12341]
 	            ]);
 	            // Set chart options
-	            var options = {'title':'Types of Payment',
+	             var options = {'title':'Types of Payment',
 	                           'width':700,
-	                           'height':500};
+	                           'height':500,
+				slices: {  3: {offset: 0.2}}
+	                               
+	                     };
 	            // Set chart options
 	            var options2 = {'title':'Types of Customer',
 	                           'width':700,
-	                           'height':500};
+	                           'height':500,
+						 slices:{ 1: {offset:0.2}}
+					 };
 	            // Set chart options
 	            var options3 = {'title':'Weekly Report',
 	                           'width':1000,
