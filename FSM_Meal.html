@@ -34,6 +34,7 @@
             <li><a href="Student_WelcomePage.html">Welcome</a></li>
             <li><a href="Student_MealPlan.html">Meal Plan</a></li>
             <li><a href="Student_DiningDollars.html">Dining Dollars</a></li>
+            <li><a href="Grand_Home.html" class="button special">Log out</a></li>
         </ul>
     </nav>
 </header>
@@ -52,41 +53,11 @@
 
                     <h2>Meal Plan</h2>
 
-                    <h3>Introduction</h3>
+                    <h3>Administrative Operations</h3>
 
-                    <p>Morgantown College is happy to announce that we now offer Meal Plans to Students, faculty,
-                        and
-                        even the general public! Students no longer have to eat in their dorms food facility! Meals
-                        Plans work at all campus food locations as well as certain third party restuarants. See
-                        below
-                        for more information.</p>
                     <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""/></a>
 
-                    <div id="info">
-                        <h3>General Information</h3>
-                        <h4>EVERYONE is eligible for a meal plan</h4>
-                        <ul>
-                            <li>With our new meal plans everyone is eligible for a meal plan. Students and faculty can
-                                use their id cards for meal plans. The general public can request an id card that will
-                                hold their meal plan information on it.
-                            </li>
-                        </ul>
-                        <h4>Get a meal plan tailored to your needs</h4>
-                        <ul>
-                            <li>We understand that no two people are the same, so why should their meal plans be the
-                                same? We now offer a variety of meal plans so that you don't have to waste food or
-                                money.
-                            </li>
-                        </ul>
-                        <h4>Rollovers</h4>
-                        <ul>
-                            <li>Unfortunately we are unable to allow meals to roll over from day to day as well as
-                                semester to semester. So if you have a three meal-a-day plan and only use two of those
-                                meals, the next day you cannot get four meals, you can still only get three.
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="op" style="display: none">
+                    <div id="op">
                         <h3>Meal Plan #1</h3>
                         <h4>Three meals a day for three days a week</h4>
                         <ul>
@@ -132,46 +103,25 @@
             </div>
             <div class="4u">
                 <section>
-                    <h3>Navigation</h3>
-                    <ul class="alt">
-                        <li><a onclick="show('info'); hide('op'); hide('form');" href="#">Information</a></li>
-                        <li><a onclick="show('op'); hide('info'); show('form');" href="#">Meal Plan Option</a></li>
-                    </ul>
+                    <h3>Magna massa blandit</h3>
+
+                    <p>Morgantown College is happy to announce that we now offer Meal Plans to Students, faculty,
+                        and even the general public! Students no longer have to eat in their dorms food facility! Meals
+                        Plans work at all campus food locations as well as certain third party restaurants. See below
+                        for more information.</p>
                 </section>
                 <hr/>
                 <section>
-                    <div id="form" style="display: none">
-                        <h3>Meal Plan Form</h3>
-
-                        <form method="get">
-                            Name:
-                            <input type="text" name="FirstName" id="FirstName" placeholder="First Name"
-                                   autocomplete="on">
-                            <input type="text" name="LastName" id="LastName" placeholder="Last Name" autocomplete="on">
-                            <br>
-                            Email:
-                            <input type="text" name="Email" id="Email" placeholder="aaa@stork.mc.edu" autocomplete="on">
-                            <br>
-                            ID Number:
-                            <input type="text" name="idnumber" id="idnumber" placeholder="88888888" autocomplete="off">
-                            <br>
-                            Meal Plan Option:
-                            <select>
-                                <option value="MP1">Meal Plan #1 (B/L/D)</option>
-                                <option value="MP2">Meal Plan #2 (B/L)</option>
-                                <option value="MP3">Meal Plan #3 (B/D)</option>
-                                <option value="MP4">Meal Plan #4 (L/D)</option>
-                                <option value="MP5">Meal Plan #5 (B)</option>
-                                <option value="MP6">Meal Plan #6 (L)</option>
-                                <option value="MP7">Meal Plan #7 (D)</option>
-                            </select>
-                            <br>
-                            Credit Card:
-                            <input type="text" name="creditcard" id="creditcard" placeholder="XXXX XXXX XXXX XXXX"
-                                   autocomplete="off">
-                            <br>
-                            <input type="submit">
-                        </form>
+                    <h3>Navigation</h3>
+                    <ul class="alt">
+                        <li><a onclick="show('op');" href="#">Information</a></li>
+                        <li><a onclick="show('editList');" href="#">Edit Meal Plan Options</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <div id="editList" style="display: none">
+                        <h3>Meal Plan Options</h3>
+                        <a href="#" class="special button">Edit Meal Options</a>
                     </div>
                 </section>
             </div>
