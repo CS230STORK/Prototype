@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>STORK</title>
+    <title>Welcome, Location Manager!</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
@@ -20,8 +20,8 @@
         <link rel="stylesheet" href="css/skel.css"/>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
-        <li><a href="Grand_Home.html" class="button special">Log out</a></li>
     </noscript>
+
 </head>
 <body id="top">
 
@@ -30,73 +30,82 @@
     <h1><a href="stork.html">STORK SYSTEMS</a></h1>
     <nav id="nav">
         <ul>
-            <li><a href="FSM_WelcomePage.html">Welcome</a></li>
-            <li><a href="FSM_Meal.html">Meal Plan</a></li>
-            <li><a href="FSM_Sales.html">Sales</a></li>
+            <li><a href="LM_WelcomePage.html">Home</a></li>
+            <li><a href="LM_Hours.html">Hours</a></li>
+            <li><a href="LM_Trans.html">Transaction History</a></li>
+            <li><a href="LM_Report.html">Sales Report</a></li>
             <li><a href="Grand_Home.html" class="button special">Log out</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- Main -->
-<section id="main" class="wrapper style1">
-    <header class="major">
+<!-- Banner -->
+<section id="banner">
+    <div class="inner">
         <h2>Morgantown College</h2>
 
-        <p>Location Manager</p>
-    </header>
+        <p>Food Services</p>
+        <ul class="actions">
+            <li><a href="LM_Hours.html" class="button big alt">Edit Hours</a></li>
+            <li><a href="LM_Trans.html" class="button big alt">Transaction History</a></li>
+            <li><a href="LM_Report.html" class="button big alt">Sales report</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="one" class="wrapper style1">
+	<center>
     <div class="container">
-        <section>
-            <h2>Food Services</h2>
-            <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""/></a>
-
-            <p>You are currently logged in as a Location Manager.</p>
-        </section>
-        <hr class="major"/>
         <div class="row">
-            <div class="6u">
-                <section class="special">
-                    <a href="FSM_Meal.html" class="image fit"><img src="images/pic02.jpg" alt=""/></a>
-
-                    <h3>Meal Plan</h3>
-
-                    <p>Morgantown College is now providing the option of Meal Plan for everyone.
-                        With a variety of options we can select what plan is the best fit for us.
-                        With the help of our new system, these can be used widely across campus.</p>
-                    <ul class="actions">
-                        <li><a href="FSM_Meal.html" class="button alt">Learn More</a></li>
-                    </ul>
+            <div class="4u">
+                <section class="special box" id="box">
+					<i class="fa fa-clock-o fa-3x"></i>
+                    <h3>Current Store Hours</h3>
+					<div class = "hours">
+					<div class = "row">
+						<div class= "col">
+							Mon - Fri
+						</div>
+						<div class= "col">
+							7:30 am - 10:30 pm
+						</div>
+					</div>
+					<div class = "row">
+						<div class= "col">
+							Saturday
+						</div>
+						<div class= "col">
+							9:00 am - 10:30 pm
+						</div>
+					</div>
+					<div class="row">
+						<div class= "col">
+							Sunday   
+						</div>
+						<div class= "col">
+							11:00 am - 7:00 pm
+						</div>
+					</div>
+				</div>
+                  
                 </section>
             </div>
-            <div class="6u">
-                <section class="special">
-                    <a href="FSM_Sales.html" class="image fit"><img src="images/pic04.jpg" alt=""/></a>
+            <div class="4u">
+                <section class="special box">
+                    <i class="fa fa-line-chart fa-3x"></i>
 
-                    <h3>Dining Dollars</h3>
+                    <h3>This Weeks Sales</h3>
 
-                    <p>Students now have the option of Dining Dollars.
-                        This service allows for anyone including Family to deposit directly to their
-                        student's account.
-                        With the help of our new system, these can be used widely across campus.</p>
-                    <ul class="actions">
-                        <li><a href="FSM_Sales.html" class="button alt">Learn More</a></li>
-                    </ul>
+                    <p><font color="green">$6,7125.56 Made this week</p>
+					<p> <i class="fa fa-arrow-circle-o-up"></i> $100 increase from last week.</font></p>
+						
                 </section>
             </div>
         </div>
     </div>
+</center>
 </section>
 
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-            <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-        </ul>
-    </div>
-</footer>
 
 </body>
 </html>
