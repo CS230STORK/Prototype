@@ -23,6 +23,46 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
+	
+	<script>
+	function confirmation(){
+		var first = document.getElementById('FirstName').value;
+		var last =document.getElementById('LastName').value;
+		var email = document.getElementById('Email').value;
+		var id =document.getElementById('idnumber').value;
+		var credit =document.getElementById('creditcard').value;
+		var security = document.getElementById('security').value;
+		var security = document.getElementById('option').value;
+
+
+		var message = "";
+		if(first == ""){
+			message += "error: First Name can't be blank.\n"
+		}
+		if(last == ""){
+			message += "error: Last Name can't be blank.\n"
+		}
+		if(email == ""){
+			message += "error: Email can't be blank.\n"
+		}
+		if(id == ""){
+			message += "error: id can't be blank.\n"
+		}
+		if(credit == ""){
+			message += "error: Credit Card can't be blank.\n"
+		}
+		if(credit == ""){
+			message += "error: Security Code can't be blank.\n"
+		}
+		if(message == ""){
+			alert("Successfuly selected meal plan." );
+		}
+		else{
+			alert(message);
+		}
+	}
+	</script>
+	
 </head>
 <body id="top">
 
@@ -175,7 +215,7 @@
                             Security Code:
                             <input type="text" name="security" id="security" placeholder="XXX" autocomplete="off">
                             <br>
-                            <input type="submit">
+                            <input type="submit" onclick= "confirmation()">
                         </form>
                     </div>
                 </section>
