@@ -22,6 +22,70 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/style-xlarge.css"/>
     </noscript>
+	
+	<script>
+	function confirmBal(){
+		var email = document.getElementById('AccountEmailForBalanceCheck').value;
+		var password =document.getElementById('AccountPassword').value;
+		
+		var amount = Math.floor((Math.random() * 1000) + 1);
+		var message = ""; 
+		
+		if(email == ""){
+			message += "error: Student email can't be blank.\n"
+		}
+		if(password == ""){
+			message += "error: Password can't be blank.\n"
+		}
+		
+		if(message == ""){
+			alert("Current balance is $" + amount);
+		}
+		else{
+			alert(message);
+		}
+	}
+	</script>
+	
+	<script>
+	function confirmFunds(){
+		var email = document.getElementById('AccountEmailForDeposit').value;
+		var password =document.getElementById('creditcard').value;
+		var credit =document.getElementById('creditcard').value;
+		var security =document.getElementById('security').value;
+		var month =document.getElementById('Month').value;
+		var year =document.getElementById('Year').value;
+		
+		var amount = Math.floor((Math.random() * 1000) + 1);
+		var message = ""; 
+		
+		if(email == ""){
+			message += "error: Student email can't be blank.\n"
+		}
+		if(password == ""){
+			message += "error: Password can't be blank.\n"
+		}
+		if(credit == ""){
+			message += "error: Credit Card can't be blank.\n"
+		}
+		if(security == ""){
+			message += "error: Security code can't be blank.\n"
+		}
+		if(month == ""){
+			message += "error: Expiration month can't be blank.\n"
+		}
+		if(year == ""){
+			message += "error: Expiration year can't be blank.\n"
+		}
+		if(message == ""){
+			alert("Successfully added money to " + email +"'s account.");
+		}
+		else{
+			alert(message);
+		}
+	}
+	</script>
+	
 </head>
 <body id="top">
 
@@ -122,7 +186,7 @@
                             Password:
                             <input type="text" name="AccountPassword" id="AccountPassword">
                             <br>
-                            <input type="submit">
+                            <input type="submit" onclick="confirmBal()">
                         </form>
                     </div>
                     <div id="add" style="display: none">
@@ -157,7 +221,7 @@
                             <input type="text" name="Year" id="Year" placeholder = "Year"
                                   autocomplete="off">
                             <br>
-                            <input type="submit">
+                            <input type="submit" onclick="confirmFunds()">
                         </form>
                     </div>
                 </section>
