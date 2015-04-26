@@ -25,11 +25,20 @@
     <script>
         function redirect() {
             var password = document.getElementById('AccountPassword').value;
-            if (password == 'student' || password == 'staff' || password == 'faculty' || password == 'public') {
+            if (password == 'student' || password == 'faculty' || password == 'public') {
                 window.location = 'Student_WelcomePage.html';
             }
             else if (password == 'location') {
                 window.location = 'LM_Home.html'
+            }
+            else if (password == 'service'){
+            	window.location = 'FSM_WelcomePage.html'
+            }
+            else if (password == 'staff'){
+            	window.locaton = 'staff.html'
+            }
+            else {
+            	alert("Incorrect Password"); 
             }
             return false;
         }
