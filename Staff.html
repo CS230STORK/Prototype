@@ -36,7 +36,7 @@
     <h1><a href="#">Morgantown College</a></h1>
     <nav id="nav">
         <ul>
-            <li><a href="Grand_login.html" class="button special">Log Out</a></li>
+			<li><a href="Grand_Login.html" class="button special">Log Out</a></li>
         </ul>
     </nav>
 </header>
@@ -45,31 +45,40 @@
 <section id="main" class="wrapper style1">
     <header class="major">
         <h2>Morgantown College</h2>
+
+		<p>Staff Payment</p>
+	</header>
+	<div class="container">
 		<form>
+			Payment Method:
 			<SELECT NAME="Payment Method" SIZE="1">
-			<OPTION SELECTED>Meal Plan
-			<OPTION>Cash
-			<OPTION>Credit Card
-			<OPTION>Dining Dollars
+				<OPTION SELECTED>Meal Plan</OPTION>
+				<OPTION>Cash</OPTION>
+				<OPTION>Credit Card</OPTION>
+				<OPTION>Dining Dollars</OPTION>
 			</SELECT>
 		</br>
+			Customer Type:
 			<SELECT NAME="Customer Type" SIZE="1">
-			<OPTION SELECTED>Student
-			<OPTION>General Public
-			<OPTION>Faculty
-			<OPTION>Staff
+				<OPTION SELECTED>Student</OPTION>
+				<OPTION>General Public</OPTION>
+				<OPTION>Faculty</OPTION>
+				<OPTION>Staff</OPTION>
 			</SELECT>
 		</br>
+			Meal Type:
 			<SELECT NAME="Meal Type" SIZE="1">
-			<OPTION SELECTED>Breakfast
-			<OPTION>Lunch
-			<OPTION>Dinner
+				<OPTION SELECTED>Breakfast</OPTION>
+				<OPTION>Lunch</OPTION>
+				<OPTION>Dinner</OPTION>
 			</SELECT>
 		</br>
-			<input type="text" name="total" id="total"
-			                       placeholder=" Total  $00.00" autocomplete="on">
+			Total:
+			<input type="text" name="total" id="total" placeholder=" $00.00" autocomplete="on">
+			</br>
 			<input type="submit" onclick= "confirmation()">
 		</form>
-
+	</div>
+</section>
 </body>
 </html>
