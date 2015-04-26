@@ -33,7 +33,7 @@ function generateFader(elem) {
             }
             elem.style.opacity = (o + step).toFixed(5);
             t = window.setTimeout(fn, 20);
-        }
+        };
         inProgress = 1; // mark started
         fn();           // start
     }
