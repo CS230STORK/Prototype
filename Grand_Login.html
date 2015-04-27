@@ -25,23 +25,30 @@
     <script>
         function redirect() {
             var password = document.getElementById('AccountPassword').value;
-            if (password == 'student') {
-                window.location = 'Student_WelcomePage.html';
+            var email = document.getElementById('AccountEmail').value;
+
+            if(email == ""){
+            	alert("error: email cannot be blank")
             }
-            else if(password == 'customer'){
-            	window.location = 'Customer_WelcomePage.html'
-            }
-            else if (password == 'location') {
-                window.location = 'LM_WelcomePage.html'
-            }
-            else if (password == 'service'){
-            	window.location = 'FSM_WelcomePage.html'
-            }
-            else if (password == 'staff'){
-            	window.locaton = 'staff.html'
-            }
-            else {
-            	alert("Incorrect Password"); 
+            else{
+            	if (password == 'student') {
+                	window.location = 'Student_WelcomePage.html';
+            	}
+            	else if(password == 'customer'){
+            		window.location = 'Customer_WelcomePage.html'
+        	 }
+        	 else if (password == 'location') {
+        	  window.location = 'LM_WelcomePage.html'
+            	}
+            	else if (password == 'service'){
+            		window.location = 'FSM_WelcomePage.html'
+        	 }
+        	 else if (password == 'staff'){
+            		window.locaton = 'staff.html'
+        	 }
+        	 else {
+            		alert("Incorrect Password"); 
+            	}
             }
             return false;
         }
