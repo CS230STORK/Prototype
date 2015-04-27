@@ -23,9 +23,55 @@
     </noscript>
     <script>
 	function confirmation(){
+		var FirstName = document.getElementById('FirstName').value;
+		var LastName = document.getElementById('LastName').value;
+		var AccountEmailForDeposit = document.getElementById('AccountEmailForDeposit').value;
+		var Street = document.getElementById('Street').value;
+		var City = document.getElementById('City').value;
+		var State = document.getElementById('State').value;
+		var Zip = document.getElementById('Zip').value;
+		var creditcard = document.getElementById('creditcard').value;
+		var security = document.getElementById('security').value;
 		var studentEmail = document.getElementById('StudentsEmailForDeposit').value;
 		var amount = document.getElementById('value').value;
-		alert("Successfully added $"+ amount +" to " + studentEmail + "'s account.");
+		
+		var message = "";
+		if(FirstName == ""){
+			message += "error: First name cannot be blank.\n"
+		}
+		if(LastName == ""){
+			message += "error: Last name cannot be blank.\n"
+		}
+		if(AccountEmailForDeposit == ""){
+			message += "error: Email  cannot be blank.\n"
+		}
+		if(Street == ""){
+			message += "error: Street name cannot be blank.\n"
+		}
+		if(City == ""){
+			message += "error: City cannot be blank.\n"
+		}
+		if(State == ""){
+			message += "error: State cannot be blank.\n"
+		}
+		if(Zip == ""){
+			message += "error: Zip code cannot be blank.\n"
+		}
+		if(creditcard == ""){
+			message += "error: Credit Card cannot be blank.\n"
+		}
+		if(security == ""){
+			message += "error: Security Code cannot be blank.\n"
+		}
+		if(studentEmail == ""){
+			message += "error: Student email cannot be blank.\n"
+		}
+		if(message == ""){
+			alert("Successfully added $"+ amount +" to " + studentEmail + "'s account.");
+		}
+		else{
+			alert(message);
+		}
 	}
 	</script>
     
